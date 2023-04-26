@@ -71,3 +71,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+## Custom:
+Para probar el primer ejercicio, se creó un API Rest [GET] con endpoint "/repositories"
+
+Para el segundo ejercicio se creó un API Rest con endpoint "/organization"
+ - Lectura: GET
+ - Escritura: POST (enviar body)
+ - Actualización: PATCH (enviar id como parámetro y body)
+ - Eliminación: DELETE (enviar id como parámetro)
