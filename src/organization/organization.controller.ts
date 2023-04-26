@@ -25,19 +25,13 @@ export class OrganizationController {
     return this.organizationService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.organizationService.findOne(+id);
-  }
-
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Body() updateOrganizationDto: UpdateOrganizationDto,
   ) {
     return this.organizationService.update(+id, updateOrganizationDto);
   }
-
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.organizationService.remove(+id);
