@@ -4,13 +4,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { RepositoriesModule } from './repositories/repositories.module';
 import { OrganizationModule } from './organization/organization.module';
 import { MetricsModule } from './metrics/metrics.module';
+import { CsvModule } from './csv/csv.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    RepositoriesModule,
-    OrganizationModule,
+    CsvModule,
     MetricsModule,
+    OrganizationModule,
+    RepositoriesModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({

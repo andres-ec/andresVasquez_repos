@@ -14,5 +14,6 @@ import { RepositoriesModule } from 'src/repositories/repositories.module';
     TypeOrmModule.forFeature([Metrics, Repo, Tribe]),
     RepositoriesModule
   ],
+  exports: [MetricsService]
 })
 export class MetricsModule {}
