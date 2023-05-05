@@ -1,4 +1,4 @@
-export interface Repository {
+export interface Verification {
   id: number;
   state: number;
 }

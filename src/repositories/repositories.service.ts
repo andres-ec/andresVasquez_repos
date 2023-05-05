@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Repository } from './interfaces/repository.interface';
+import { Verification } from './interfaces/verification.interface';
 
 @Injectable()
 export class RepositoriesService {
-  private readonly repositories: Repository[];
+  private readonly repositories: Verification[];
 
   constructor() {
     this.repositories = [

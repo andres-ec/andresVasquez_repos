@@ -3,12 +3,14 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RepositoriesModule } from './repositories/repositories.module';
 import { OrganizationModule } from './organization/organization.module';
+import { MetricsModule } from './metrics/metrics.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     RepositoriesModule,
     OrganizationModule,
+    MetricsModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
@@ -22,7 +24,6 @@ import { OrganizationModule } from './organization/organization.module';
           rejectUnauthorized: false, // Set to true if server has a valid SSL certificate
         },
         autoLoadEntities: true,
-        synchronize: true,
       }),
       inject: [ConfigService],
     }),
